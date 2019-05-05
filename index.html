@@ -167,7 +167,7 @@ body, html {
 <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="Profile data">
 <h1 class="w3-wide"><b>Profile data</b></h1>
 <div>
-  <a href="Batch2k17-2k21.html" target=_parent> <h2> <b>people  (click here)</b></h2></a>
+  <a href=# target=_parent onclick="loadbatch()"> <h2> <b>people  (click here)</b></h2>  </a>
 </div>
 <hr><hr>
 <div class="bg-image"></div>    <div class="w3-wide bg-text">
@@ -276,6 +276,16 @@ var modal = document.getElementById('ticketModal');
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+  }
+}
+
+function loadbatch(){
+  let password = prompt("Please enter your password", "");
+  if (password == "kavi") {
+    window.location = "Batch2k17-2k21.html"
+  } else {
+    alert("Wrong password");
+    return false
   }
 }
 </script>
